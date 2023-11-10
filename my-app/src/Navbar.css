@@ -1,0 +1,58 @@
+/* Navbar.css */
+
+body {
+    margin: 0;
+  }
+  
+  .navbar-container {
+    background: transparent;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    color: #fff5e4;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .inner-container {
+    padding: 1.2%;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  
+  
+  .logo {
+    font-size: 1.2em;
+    margin-left: 40px; /* Increase this value for more space between options */
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .option-buttons {
+    margin-left: auto; /* This will push the option-buttons to the right */
+    font-size: 1.2em;
+    list-style: none;
+    display: flex;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    float: right;
+  }
+  
+  .option-buttons li {
+    margin-right: 40px; /* Increase this value for more space between options */
+    cursor: pointer;
+  }
+  
+  .option-buttons li:hover {
+    transition: 0.2s ease-in;
+    color: #d5cdbf;
+  }
+
+  .logo:hover {
+    transition: 0.2s ease-in;
+    color: #d5cdbf;
+  }
+  
