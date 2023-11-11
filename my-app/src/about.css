@@ -1,0 +1,125 @@
+.about-container{
+    padding: 100px 25px 0px;
+    background-color: #FFF3D9;
+}
+
+.about-rows {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-row1 {
+    flex-basis: 30%;
+}
+
+.about-row1 img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.about-row2 {
+    flex-basis: 60%;
+}
+
+.sub-title {
+    font-weight: 600;
+    font-size: 60px;
+    text-transform: bold;
+}
+
+.about-row2 p {
+    letter-spacing: 1px;
+    line-height: 1.5;
+    font-size: medium;
+}
+.tab-titles {
+    display: flex;
+    margin: 20px 0 20px;
+}
+
+.tab-links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor:pointer;
+    position: relative;
+}
+
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #CC5500;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after {
+ width: 50%;
+}
+
+.tab-contents {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0 20px;
+}
+.tab-contents li {
+    font-size: 1em;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    list-style: none;
+}
+
+.tab-contents li span {
+    margin: 0;
+    font-weight: bold;
+    font-size: 1em;
+    color:  #CC5500;
+}
+
+.tab-contents-courses {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tab-contents-courses .course-container {
+    flex-basis: calc(33.33% - 10px); /* 10px for spacing between containers */
+    margin-bottom: 20px;
+}
+
+.tab-contents-courses a {
+    display: block;
+    padding: 10px;
+    background-color: #CC5500;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #FFF3D9;
+    text-align: center;
+    font-size: 1em;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    list-style: none;
+}
+
+.tab-contents-courses a:hover {
+    transition: 0.5s;
+    background-color: #a04300;  
+}
+
+
+.projects-container {
+    padding: 30px 0px;
+}
+
+.projects-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, min-max(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}

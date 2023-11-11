@@ -9,7 +9,9 @@ body {
     position: fixed;
     width: 100%;
     z-index: 100;
-    color: #fff5e4;
+    color: #d5cdbf;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+    letter-spacing: 1px;
     display: flex;
     justify-content: space-between;
   }
@@ -48,11 +50,11 @@ body {
   
   .option-buttons li:hover {
     transition: 0.2s ease-in;
-    color: #d5cdbf;
+    color: #b4ada2;
   }
 
   .logo:hover {
     transition: 0.2s ease-in;
-    color: #d5cdbf;
+    color: #b4ada2
   }
   
