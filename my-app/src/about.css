@@ -23,22 +23,26 @@
 }
 
 .sub-title {
+    color: #353839;
     font-weight: 600;
     font-size: 60px;
     text-transform: bold;
 }
 
 .about-row2 p {
+    color: #353839;
     letter-spacing: 1px;
     line-height: 1.5;
     font-size: medium;
 }
 .tab-titles {
+    color: #353839;
     display: flex;
     margin: 20px 0 20px;
 }
 
 .tab-links {
+    color: #353839;
     margin-right: 50px;
     font-size: 18px;
     font-weight: 500;
@@ -50,7 +54,7 @@
     content: '';
     width: 0;
     height: 3px;
-    background: #CC5500;
+    background: #e1430c;
     position: absolute;
     left: 0;
     bottom: -8px;
@@ -68,6 +72,7 @@
     margin: 20px 0 20px;
 }
 .tab-contents li {
+    color: #353839;
     font-size: 1em;
     letter-spacing: 1px;
     line-height: 1.5;
@@ -78,7 +83,7 @@
     margin: 0;
     font-weight: bold;
     font-size: 1em;
-    color:  #CC5500;
+    color:  #e1430c;
 }
 
 .tab-contents-courses {
@@ -96,7 +101,7 @@
 .tab-contents-courses a {
     display: block;
     padding: 10px;
-    background-color: #CC5500;
+    background-color: #bf380b;
     border-radius: 10px;
     text-decoration: none;
     color: #FFF3D9;
@@ -109,17 +114,212 @@
 
 .tab-contents-courses a:hover {
     transition: 0.5s;
-    background-color: #a04300;  
+    background-color: #6f2107;  
 }
 
+.sub-title-project {
+    color: #353839;
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 60px;
+    text-transform: bold;
+}
 
 .projects-container {
-    padding: 30px 0px;
+    padding-left: 100px;
+    padding-right: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Stack projects vertically */
 }
 
 .projects-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, min-max(250px, 1fr));
-    grid-gap: 40px;
-    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-around; 
 }
+
+.projects-box {
+    flex-basis: calc(30% - 10px); 
+    margin-bottom: 30px; 
+    text-align: center;
+    background-color: #bf380b; 
+    padding: 20px; /* Add some padding for better visual appearance */
+    border-radius: 15px;   
+}
+
+.projects-box:nth-child(2n) {
+    background-color: #bf380b; /* Set a different background color for even-numbered boxes */
+}
+
+.projects-box:nth-child(3n) {
+    background-color: #bf380b; /* Set a different background color for every third box */
+}
+
+.projects-box h2 {
+    color: #FFF3D9;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+
+.projects-box p {
+    color: #FFF3D9;
+    font-size: 1em;
+    letter-spacing: 1px;
+    line-height: 1.2;
+}
+
+.projects-box a{
+    display: block;
+    align-items: center;
+    text-decoration: none;
+    font-size: 0.75em;
+    color: #FFF3D9;
+    font-weight: bold;
+}
+
+.projects-box a:hover {
+    transition: 0.5s;
+    color: #cdc3ae;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 100px;
+}
+
+.contact-left {
+    flex-basis: 35%;
+    padding-left: 5%;
+}
+
+.contact-right {
+    flex-basis: 60%;
+}
+
+.contact-left p {
+    margin-top: 5%;
+    color: #353839;
+    font-size: 1em;
+    letter-spacing: 1px;
+    line-height: 1.2;
+}
+
+.icon{
+    color: #bf380b;
+    margin-right: 15px;
+    font-size: 25px;
+    margin-left: 40px;
+}
+
+.contact-left a{
+    margin-top: 10px;
+    color: #353839;
+    font-size: 1em;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    text-decoration: none;
+}
+
+.btn {
+    display: block;
+    width: fit-content;
+    border: 1px solid #bf380b;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #353839;
+    font-size: 1em;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    margin-left: 35px;
+}
+
+
+.btn:hover {
+    background-color: #bf380b;
+    transition: 0.5s;
+    color: #FFF3D9;
+}
+
+.contact-right form{
+    width: 100%;
+}
+
+
+.form input, form textarea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    padding: 15px;
+    margin: 15px, 0px;
+    font-size: 18px;
+    border-radius: 6;
+    resize: none;
+}
+
+.contact-right form textarea::placeholder { 
+    text-decoration: none;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+  }
+  
+  .contact-left {
+    flex-basis: 30%;
+    padding-right: 20px;
+  }
+  
+  .contact-right {
+    flex-basis: 65%;
+  }
+  
+  /* Styling for contact information and links */
+  .contact-left p {
+    margin-bottom: 15px; /* Space between contact information */
+    font-size: 1.1em;
+    color: #353839;
+  }
+  
+  .contact-left a {
+    display: block;
+    margin-bottom: 15px; /* Space between links */
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .contact-right form {
+    width: 100%;
+  }
+  
+  .contact-right form input,
+  .contact-right form textarea {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+  }
+  
+  .contact-right form button {
+    width: 82%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #602d00;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  

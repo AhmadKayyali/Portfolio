@@ -6,11 +6,10 @@ body {
   
   .navbar-container {
     background: transparent;
-    position: fixed;
+    position: absolute;
     width: 100%;
     z-index: 100;
     color: #d5cdbf;
-    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
     letter-spacing: 1px;
     display: flex;
     justify-content: space-between;
@@ -32,29 +31,30 @@ body {
     cursor: pointer;
   }
   
-  .option-buttons {
-    margin-left: auto; /* This will push the option-buttons to the right */
-    font-size: 1.2em;
-    list-style: none;
-    display: flex;
-    text-transform: uppercase;
-    font-weight: bold;
-    cursor: pointer;
-    float: right;
-  }
-  
-  .option-buttons li {
-    margin-right: 40px; /* Increase this value for more space between options */
-    cursor: pointer;
-  }
-  
-  .option-buttons li:hover {
-    transition: 0.2s ease-in;
-    color: #b4ada2;
-  }
+.option-buttons {
+  margin-left: auto;
+  font-size: 1.2em;
+  list-style: none;
+  display: flex;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  float: right;
+}
 
-  .logo:hover {
-    transition: 0.2s ease-in;
-    color: #b4ada2
-  }
-  
+/* Updated styles for option buttons */
+.option-buttons button {
+  font-size: 1.2em;
+  margin-left: 40px; /* Adjust this value to match the spacing */
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  color: #d5cdbf; /* Match the initial color */
+  border: none;
+  background: none;
+}
+
+.option-buttons button:hover {
+  transition: 0.2s ease-in;
+  color: #b4ada2;
+}

@@ -2,9 +2,19 @@ import React, { useState, useEffect, useRef } from "react";
 import Typed from 'typed.js';
 import "./style.scss";
 import "./about.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faSquarePhoneFlip, faPaperPlane, faFilm, faPeopleArrows, faUser, faSquareArrowUpRight} from '@fortawesome/free-solid-svg-icons';
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import '@fortawesome/fontawesome-svg-core/styles.css';
+import Navbar from './Navbar'; 
+
 
 function App() {
   const el = useRef(null);
+
+  const aboutRef = useRef(null);
+  const projectsRef = useRef(null);
+  const contactRef = useRef(null);
 
   useEffect(() => {
     const typed = new Typed(el.current, {
@@ -27,6 +37,15 @@ function App() {
 
   function handleTab(tab) {
     setSelectedTab(tab);
+  }
+
+  function scrollToSection(refName) {
+    const refs = {
+      aboutRef,
+      projectsRef,
+      contactRef
+    };
+    refs[refName].current.scrollIntoView({ behavior: 'smooth' });
   }
 
   function renderTabContent() {
@@ -170,6 +189,7 @@ function App() {
   return (
     <html lang="en">
       <body>
+      <Navbar scrollToSection={scrollToSection} />
         <div class="home-container">
 
         <div class="text-container">
@@ -206,6 +226,7 @@ function App() {
       </div>
       </body>
 
+      <div ref={aboutRef}>
       <div className="about-container">
         <div className="about-rows">
           <div className="about-row1"><img src="OrangeMan.png" /></div>
@@ -222,43 +243,62 @@ function App() {
           </div>
         </div>
       </div>
+      </div>
 
+      <div ref={projectsRef}>
+      <h1 className="sub-title-project">Projects</h1>
 
       <div className="projects-container">
-        <h1 className="sub-title">Projects</h1>
-        <div className="projects-list">
-            <div>
 
-            <div>
-              <h2>Loop Cinemas</h2>
-              <p>This project was a part of my Full Stack Development elective in which I built an extensive fully
-functional webpage throughout the semester. I had used the React JavaScript library to code this webpage and used
-the REST and GraphQL API architectures for different parts site. The client side of the Loop Cinemas site had
-a fully functional log in, sign up, review, and booking functionalities. There was a different interface for admins
-separate to that of the client. The Admin page allowed admins add, remove, or edit, movies showcased. They can
-also block users and delete movie reviews posted by users.</p>
-              <a href="#">Github Repository</a>
+        <div className="projects-list">
+
+            <div className="projects-box">
+              <h2>Loop Cinemas <FontAwesomeIcon icon={faFilm} size="xl" /></h2>
+              <p>As part of my Full Stack Development elective, I undertook a semester-long project to create an extensive and fully functional webpage. Leveraging the React JavaScript library, I implemented both REST and GraphQL API architectures to enhance different aspects of the site. The client-side interface for Loop Cinemas featured robust functionalities, including seamless login, sign-up, review, and booking processes. Notably, administrators had a distinct interface equipped with the ability to add, remove, or edit showcased movies. Admins could also exercise control by blocking users and managing movie reviews posted by users, allowing for comprehensive site administration.</p>
+              
+              <a href="https://github.com/rmit-fwp-s2-23/Assignment1" target="_blank"><FontAwesomeIcon icon={faSquareArrowUpRight} beat size="2xl"/></a>
+
+            </div>
+
+            <div className="projects-box">
+              <h2>Closing the Gap <FontAwesomeIcon icon={faPeopleArrows}  size="xl"/></h2>
+              <p>I developed a webpage designed to provide professionals with a visual representation of the disparities between indigenous and non-indigenous Australians. The primary objective of this site was to spotlight and illustrate the variations in education, healthcare, welfare, and overall quality of life. This project marked my debut showcase at RMIT, earning a High Distinction grade for its comprehensive execution. Employing the JDBC architecture, I established a seamless connection to the database, utilizing SQL queries to dynamically present real-time data on the webpage.</p>
+              <a href="https://github.com/rmit-computing-technologies/cosc2803-sep22-studio-project-team-023-cosc2803-sep22" target="_blank"><FontAwesomeIcon icon={faSquareArrowUpRight} beat size="2xl"/></a>
+            </div>
+
+
+            <div className="projects-box">
+              <h2>Personal Portfolio <FontAwesomeIcon icon={faUser}  size="xl"/></h2>
+              <p>This personal project serves as a showcase of both my artistic flair and technical proficiency. Crafted according to my preferences, the website embodies a harmonious blend of creativity and technical expertise. Utilizing the React JavaScript library, I seamlessly translated the knowledge acquired from my Full Stack course into the design and functionality of the webpage. The result is a digital portfolio that authentically represents my skills and reflects my unique approach to web development.</p>
+              <a href="https://github.com/AhmadKayyali/Portfolio" target="_blank"><FontAwesomeIcon icon={faSquareArrowUpRight} beat size="2xl"/></a>
             </div>
             
-              <h2>Closing the Gap</h2>
-              <p>Built a webpage that allowed professionals to learn and visually see statistics about the ”gap”
-between indigenous and non-indigenous Australians. The aim of this site was to highlight and visually show professionals
-the difference in education, healthcare, welfare, and overall quality of life. This was my first project I
-had showcased at RMIT and I had received a High Distinction grade for the project overall. I had used the JDBC
-architecture to connect the database and handle SQL queries to showcase data in real time on the webpage.</p>
-              <a href="#">Github Repository</a>
-            </div>
-
-
-            <div>
-              <h2>Personal Portfolio</h2>
-              <p></p>
-              <a href="#">Github Repository</a>
-            </div>
         </div>
 
       </div>
+</div>
 
+<div ref={contactRef}>
+      <h1 className="sub-title-project">Contact Me</h1>
+      <div className="contact-container">
+          <div className="contact-left">
+         <p><FontAwesomeIcon icon={faPaperPlane} className="icon"  size="2xl"/> ahmadkayy@gmail.com</p>
+         <p><FontAwesomeIcon icon={faSquarePhoneFlip} flip="horizontal" className="icon"  size="2xl"/> (+61) 413 918 228</p>
+         <p><a href="https://www.linkedin.com/in/ahmad-al-kayyali-07536224a/" target="_blank"><FontAwesomeIcon icon={faLinkedin} className="icon" size="2xl"/>LinkedIn</a></p>
+
+         <a href="my-app/public/AhmadCV.pdf" download className="btn">Download CV</a>
+          </div>
+
+          <div className="contact-right">
+            <form>
+              <input className="input" type="text" name="Name" placeholder="Your Name" required></input>
+              <input className="input" type="email" name="email" placeholder="Your Email" required></input>
+              <textarea className="textarea"  name="message" rows="6" placeholder="Your Message"></textarea>
+              <button type="submit">Submit</button>
+            </form>
+        </div>
+      </div>
+      </div>
     </html>
   );
 }

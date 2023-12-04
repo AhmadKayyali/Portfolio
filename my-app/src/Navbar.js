@@ -2,17 +2,23 @@
 
 import "./Navbar.css";
 
-function Navbar() {
+function Navbar({ scrollToSection }) {
   return (
     <div className="navbar-container">
         
     <div className="inner-container">
       <div className="logo">Home</div>
       <ul className="option-buttons">
-        <li>About</li>
-        <li>Projects</li>
-        <li>Contact</li>
-      </ul>
+          <li>
+            <button onClick={() => scrollToSection("aboutRef")}>About</button>
+          </li>
+          <li>
+            <button onClick={() => scrollToSection("projectsRef")}>Projects</button>
+          </li>
+          <li>
+            <button onClick={() => scrollToSection("contactRef")}>Contact</button>
+          </li>
+        </ul>
       </div>
     </div>
   );
