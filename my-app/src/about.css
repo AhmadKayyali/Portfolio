@@ -3,6 +3,16 @@
     background-color: #FFF3D9;
 }
 
+.text-container span {
+    background-color: rgba(213, 205, 191); 
+    color: #1d1f20; 
+    padding: 10px; /* Add padding for better visibility */
+  }
+  
+  .text-container span::selection {
+    background-color: initial; /* Reset background color for text selection */
+  }
+
 .about-rows {
     display: flex;
     justify-content: space-between;
@@ -321,5 +331,41 @@
     font-size: 1em;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
+  }
+  
+
+  /* Styles for the popup */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    color: #fff;
+    z-index: 9999;
+  }
+  
+  .popup-content {
+    text-align: center;
+  }
+  
+  .popup p {
+    margin-bottom: 10px;
+  }
+  
+  .popup button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .popup button:hover {
+    background-color: #ddd;
   }
   

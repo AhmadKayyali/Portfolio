@@ -7,9 +7,48 @@ import {faSquarePhoneFlip, faPaperPlane, faFilm, faPeopleArrows, faUser, faSquar
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import Navbar from './Navbar'; 
+import emailjs from '@emailjs/browser';
+
 
 
 function App() {
+
+  const form = useRef();
+
+  const Popup = ({ message, closePopup }) => {
+    return (
+      <div className="popup">
+        <div className="popup-content">
+          <p>{message}</p>
+          <button onClick={closePopup}>Close</button>
+        </div>
+      </div>
+    );
+  };
+  
+  const [showPopup, setShowPopup] = useState(false);
+  
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('ahmadkayy@gmail.com', 'template_4691b3e', form.current, 'BC-R8YwccW3WZ4bYL')
+      .then((result) => {
+          console.log(result.text);
+          setShowPopup(true);
+          e.target.reset()
+      }, (error) => {
+          console.log(error.text);
+      });
+      setTimeout(() => {
+        setShowPopup(false);
+      }, 10000);
+    }
+
+    const closePopup = () => {
+      setShowPopup(false);
+    };
+
   const el = useRef(null);
 
   const aboutRef = useRef(null);
@@ -185,7 +224,6 @@ function App() {
     }
   }
 
-  
   return (
     <html lang="en">
       <body>
@@ -286,16 +324,17 @@ function App() {
          <p><FontAwesomeIcon icon={faSquarePhoneFlip} flip="horizontal" className="icon"  size="2xl"/> (+61) 413 918 228</p>
          <p><a href="https://www.linkedin.com/in/ahmad-al-kayyali-07536224a/" target="_blank"><FontAwesomeIcon icon={faLinkedin} className="icon" size="2xl"/>LinkedIn</a></p>
 
-         <a href="my-app/public/AhmadCV.pdf" download className="btn">Download CV</a>
+         <a className="btn" href="my-app/src/AhmadCV.pdf" title="" download>Download CV</a>
           </div>
 
           <div className="contact-right">
-            <form>
-              <input className="input" type="text" name="Name" placeholder="Your Name" required></input>
-              <input className="input" type="email" name="email" placeholder="Your Email" required></input>
+            <form ref={form} onSubmit={sendEmail}>
+              <input className="input" type="text" name="user_name" placeholder="Your Name" required></input>
+              <input className="input" type="email" name="user_email" placeholder="Your Email" required></input>
               <textarea className="textarea"  name="message" rows="6" placeholder="Your Message"></textarea>
-              <button type="submit">Submit</button>
+              <button type="submit" value="Send" >Submit</button>
             </form>
+            {showPopup && <Popup message="Message sent successfully!" closePopup={closePopup} />}
         </div>
       </div>
       </div>
