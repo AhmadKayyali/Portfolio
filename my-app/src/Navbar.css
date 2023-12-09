@@ -25,6 +25,7 @@ body {
   
   .logo {
     font-size: 1.2em;
+    list-style: none;
     margin-left: 40px; /* Increase this value for more space between options */
     text-transform: uppercase;
     font-weight: bold;
@@ -57,4 +58,20 @@ body {
 .option-buttons button:hover {
   transition: 0.2s ease-in;
   color: #b4ada2;
+}
+
+
+/* Adjustments for mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .navbar-inner {
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  .navbar-logo {
+    font-size: 1.2em; /* Adjusted font size for smaller screens */
+  }
+
+  .navbar-links {
+    display: none; /* Hide links on smaller screens initially */
+  }
 }

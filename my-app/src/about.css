@@ -369,3 +369,64 @@
     background-color: #ddd;
   }
   
+  /* Media query for smaller screens (phones) */
+@media screen and (max-width: 768px) {
+    /* Adjusting the sizes for various sections */
+  
+    /* About section */
+    .about-container {
+      padding: 30px 10px 0; /* Adjusted padding for smaller screens */
+    }
+  
+    .text-container span {
+      padding: 6px; /* Adjusted padding for better visibility */
+      font-size: 14px; /* Reduced font size for better readability */
+    }
+  
+    .sub-title, .sub-title-project {
+      font-size: 40px; /* Smaller title font size for mobile */
+    }
+  
+    .about-row1 img {
+      border-radius: 10px; /* Reduced border radius for images */
+    }
+  
+    /* Projects section */
+    .projects-box {
+      flex-basis: calc(50% - 10px); /* Adjusted width for project boxes */
+      margin-bottom: 20px; /* Reduced margin between project boxes */
+      padding: 15px; /* Increased padding for better spacing */
+    }
+  
+    .projects-box h2 {
+      font-size: 1em; /* Adjusted project title font size */
+    }
+  
+    .projects-box p {
+      font-size: 0.9em; /* Adjusted project description font size */
+    }
+  
+    .projects-box a {
+      font-size: 0.8em; /* Smaller font size for project links */
+    }
+  
+    /* Contact section */
+    .contact-container {
+      padding: 30px; /* Adjusted padding for contact section */
+    }
+  
+    .contact-left {
+      flex-basis: 100%; /* Full width for contact information */
+      padding-right: 0; /* No right padding for contact information */
+    }
+  
+    .contact-right form input,
+    .contact-right form textarea {
+      width: 100%; /* Full width for form inputs */
+      font-size: 16px; /* Adjusted font size for form inputs */
+    }
+  
+    .btn {
+      margin-left: 0; /* No left margin for buttons */
+    }
+  }
