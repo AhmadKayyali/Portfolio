@@ -111,49 +111,49 @@ function App() {
         return (
         <div className="tab-contents-courses">
           <div className="course-container">
-            <a href="http://www1.rmit.edu.au/courses/054079" target="_blank">Programming Bootcamp 1</a>
+            <a href="http://www1.rmit.edu.au/courses/054079" rel="noreferrer" target="_blank">Programming Bootcamp 1</a>
           </div>
           <div className="course-container">
-            <a href="http://www1.rmit.edu.au/courses/054081" target="_blank">Programming Studio 1</a>
+            <a href="http://www1.rmit.edu.au/courses/054081" rel="noreferrer" target="_blank">Programming Studio 1</a>
           </div>
           <div className="course-container">
-           <a href="http://www1.rmit.edu.au/courses/054077" target="_blank">Data Analytics and Visualization</a>
-          </div>
-
-          <div className="course-container">
-            <a href="http://www1.rmit.edu.au/courses/054080" target="_blank">Programming Bootcamp 2</a>
-          </div>
-          <div className="course-container">
-            <a href="http://www1.rmit.edu.au/courses/054082" target="_blank">Programming Studio 2</a>
-          </div>
-          <div className="course-container">
-            <a href="http://www1.rmit.edu.au/courses/054076" target="_blank">Discrete Mathematics</a>
+           <a href="http://www1.rmit.edu.au/courses/054077" rel="noreferrer" target="_blank">Data Analytics and Visualization</a>
           </div>
 
           <div className="course-container">
-            <a href="http://www1.rmit.edu.au/courses/004309" target="_blank">Software Engineering Fundamentals</a>
+            <a href="http://www1.rmit.edu.au/courses/054080" rel="noreferrer" target="_blank">Programming Bootcamp 2</a>
           </div>
           <div className="course-container">
-            <a href="http://www1.rmit.edu.au/courses/004302" target="_blank">Algorithms and Analysis</a>
+            <a href="http://www1.rmit.edu.au/courses/054082" rel="noreferrer" target="_blank">Programming Studio 2</a>
           </div>
           <div className="course-container">
-            <a href="http://www1.rmit.edu.au/courses/054229" target="_blank">Foundations of Artificial Intelligence</a>
-          </div>
-          <div className="course-container">
-            <a href="http://www1.rmit.edu.au/courses/053172" target="_blank">Full Stack Development</a>
+            <a href="http://www1.rmit.edu.au/courses/054076" rel="noreferrer" target="_blank">Discrete Mathematics</a>
           </div>
 
           <div className="course-container">
-            <a href="http://www1.rmit.edu.au/courses/053171" target="_blank">Foundations of Cloud Computing</a>
+            <a href="http://www1.rmit.edu.au/courses/004309" rel="noreferrer" target="_blank">Software Engineering Fundamentals</a>
           </div>
           <div className="course-container">
-            <a href="http://www1.rmit.edu.au/courses/054986" target="_blank">Introduction to Cyber Security</a>
+            <a href="http://www1.rmit.edu.au/courses/004302" rel="noreferrer" target="_blank">Algorithms and Analysis</a>
           </div>
           <div className="course-container">
-            <a href="http://www1.rmit.edu.au/courses/052739" target="_blank">Practical Data Science</a>
+            <a href="http://www1.rmit.edu.au/courses/054229" rel="noreferrer" target="_blank">Foundations of Artificial Intelligence</a>
           </div>
           <div className="course-container">
-            <a href="http://www1.rmit.edu.au/courses/038407" target="_blank">Cloud Security</a>
+            <a href="http://www1.rmit.edu.au/courses/053172" rel="noreferrer" target="_blank">Full Stack Development</a>
+          </div>
+
+          <div className="course-container">
+            <a href="http://www1.rmit.edu.au/courses/053171" rel="noreferrer" target="_blank">Foundations of Cloud Computing</a>
+          </div>
+          <div className="course-container">
+            <a href="http://www1.rmit.edu.au/courses/054986" rel="noreferrer" target="_blank">Introduction to Cyber Security</a>
+          </div>
+          <div className="course-container">
+            <a href="http://www1.rmit.edu.au/courses/052739" rel="noreferrer" target="_blank">Practical Data Science</a>
+          </div>
+          <div className="course-container">
+            <a href="http://www1.rmit.edu.au/courses/038407" rel="noreferrer" target="_blank">Cloud Security</a>
           </div>
         </div>
 
@@ -232,7 +232,7 @@ function App() {
       <div ref={aboutRef}>
       <div className="about-container">
         <div className="about-rows">
-          <div className="about-row1"><img src="OrangeMan.png" /></div>
+          <div className="about-row1"><img src="public/OrangeMan.png" alt="Friendly waving man" /></div>
           <div className="about-row2">
             <h1 className="sub-title">About Me</h1>
           <p> Hi there! I'm Ahmad, a motivated Software Engineering student at RMIT University with a passion for exploring diverse technologies. Team player with a strong work ethic eager to gain practical experience by working closely with stakeholders to solve business problems and achieve great outcomes. Equipped with a versatile skill set in various technologies and have a strong foundation in software engineering principles. Demonstrated ability to quickly grasp new concepts and adapt to evolving challenges. Committed to continuous learning and professional growth.</p>
