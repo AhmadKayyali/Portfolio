@@ -9,8 +9,6 @@ import '@fortawesome/fontawesome-svg-core/styles.css';
 import Navbar from './Navbar'; 
 import emailjs from '@emailjs/browser';
 
-
-
 function App() {
 
   const form = useRef();
@@ -152,10 +150,10 @@ function App() {
             <a href="http://www1.rmit.edu.au/courses/054986" target="_blank">Introduction to Cyber Security</a>
           </div>
           <div className="course-container">
-            <a href="http://www1.rmit.edu.au/courses/014052" target="_blank">Further Programming</a>
+            <a href="http://www1.rmit.edu.au/courses/052739" target="_blank">Practical Data Science</a>
           </div>
           <div className="course-container">
-            <a href="http://www1.rmit.edu.au/courses/051831" target="_blank">Machine Learning</a>
+            <a href="http://www1.rmit.edu.au/courses/038407" target="_blank">Cloud Security</a>
           </div>
         </div>
 
@@ -164,7 +162,7 @@ function App() {
         return (
           <div className="tab-contents">
             <li>
-              <span>RMIT Student Connect Concierge</span>
+              <span>RMIT Connect Concierge</span>
               <br />
               RMIT University
               <br />
@@ -172,15 +170,7 @@ function App() {
             </li>
             <br />
             <li>
-              <span>Burgertory Team Member</span>
-              <br />
-              Burgertory
-              <br />
-              October 2022 - November 2023
-            </li>
-            <br />
-            <li>
-              <span>RMIT Transition Support Officer</span>
+              <span>Contract RMIT Support Officer</span>
               <br />
               RMIT University
               <br />
@@ -188,7 +178,7 @@ function App() {
             </li>
             <br />
             <li>
-              <span>Polling Assistant</span>
+              <span>Contract Polling Assistant</span>
               <br />
               The Australian Electoral Commission
               <br />
@@ -196,33 +186,8 @@ function App() {
             </li>
           </div>
         );
-      case "volunteering":
-        return (
-          <div className="tab-contents">
-            <li>
-              <span>Olive Kids Foundation</span>
-              <br />
-              October 2022 - Present
-            </li>
-            <br />
-            <li>
-              <span>Australian Red Cross</span>
-              <br />
-              April 2023
-            </li>
-            <br />
-            <li>
-              <span>Crepes For Change</span>
-              <br />
-              July 2023
-            </li>
-            <br />
-          </div>
-        );
-      default:
-        return null;
-    }
   }
+}
 
   return (
     <html lang="en">
@@ -270,12 +235,11 @@ function App() {
           <div className="about-row1"><img src="OrangeMan.png" /></div>
           <div className="about-row2">
             <h1 className="sub-title">About Me</h1>
-          <p> Hi there! I'm Ahmad, a Software Engineer interested in pursuing a career in full stack web development. I'm a fast learner with an adaptable skill set confident in using a variety of languages and libraries. I have excelled in many advanced courses and electives at RMIT such as Full Stack Development, Machine Learning, Cloud Computing, Programming Studio, Algorithms & Analysis, and many more! I have attached course outlines for each course I had undertook along with the grade I scored. I also have extensive work experience in a variety of customer service and customer experience roles. I gained valuable communication and problem solving skills from these positions as I regularly had to problem solve quickly under pressure and constraints. I also learned the importance of communication to resolve issues quickly as to ensure businesses run smoothly. Overall, I find myself to be a confident and well rounded individual with a great work ethic and drive to be better and achieve outstanding outcomes. With that being said, I am also excited to keep learning and take on challenging tasks with the positions that come my way. Have a look through my qualifications and please contact me if you have any concerns or require any additional information from me.</p>
+          <p> Hi there! I'm Ahmad, a motivated Software Engineering student at RMIT University with a passion for exploring diverse technologies. Team player with a strong work ethic eager to gain practical experience by working closely with stakeholders to solve business problems and achieve great outcomes. Equipped with a versatile skill set in various technologies and have a strong foundation in software engineering principles. Demonstrated ability to quickly grasp new concepts and adapt to evolving challenges. Committed to continuous learning and professional growth.</p>
           <div className="tab-titles">
           <p className={`tab-links ${selectedTab === "education" ? "active-link" : ""}`} onClick={() => handleTab("education")}>Education</p>
               <p className={`tab-links ${selectedTab === "courses" ? "active-link" : ""}`} onClick={() => handleTab("courses")}>Courses</p>
               <p className={`tab-links ${selectedTab === "experience" ? "active-link" : ""}`} onClick={() => handleTab("experience")}>Experience</p>
-              <p className={`tab-links ${selectedTab === "volunteering" ? "active-link" : ""}`} onClick={() => handleTab("volunteering")}>Volunteering</p>
           </div>
           {renderTabContent()}
           </div>
@@ -322,9 +286,9 @@ function App() {
           <div className="contact-left">
          <p><FontAwesomeIcon icon={faPaperPlane} className="icon"  size="2xl"/> ahmadkayy@gmail.com</p>
          <p><FontAwesomeIcon icon={faSquarePhoneFlip} flip="horizontal" className="icon"  size="2xl"/> (+61) 413 918 228</p>
-         <p><a href="https://www.linkedin.com/in/ahmad-al-kayyali-07536224a/" target="_blank"><FontAwesomeIcon icon={faLinkedin} className="icon" size="2xl"/>LinkedIn</a></p>
+         <p><a href="https://www.linkedin.com/in/ahmad-kayyali/" target="_blank"><FontAwesomeIcon icon={faLinkedin} className="icon" size="2xl"/>LinkedIn</a></p>
 
-         <a className="btn" href="my-app/src/AhmadCV.pdf" title="" download>Download CV</a>
+         <a className="btn" href="https://drive.google.com/file/d/1e-_QxRAQTKFMU7Tfh61ytPepPtGF8UvV/view?usp=sharing" target="_blank" title="" download>Download CV</a>
           </div>
 
           <div className="contact-right">
