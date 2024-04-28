@@ -3,11 +3,12 @@ import Typed from 'typed.js';
 import "./style.scss";
 import "./about.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faSquarePhoneFlip, faPaperPlane, faFilm, faPeopleArrows, faUser, faSquareArrowUpRight} from '@fortawesome/free-solid-svg-icons';
+import {faPaperPlane, faFilm, faPeopleArrows, faUser, faSquareArrowUpRight} from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import Navbar from './Navbar'; 
 import emailjs from '@emailjs/browser';
+import orangeman from "./images/orangeman.png"
 
 function App() {
 
@@ -30,9 +31,8 @@ function App() {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('ahmadkayy@gmail.com', 'template_4691b3e', form.current, 'BC-R8YwccW3WZ4bYL')
-      .then((result) => {
-          console.log(result.text);
+    emailjs.sendForm('service_lmpscwp', 'template_4691b3e', form.current, '-cjLHWkfSGHp2xCpq')
+      .then(() => {
           setShowPopup(true);
           e.target.reset()
       }, (error) => {
@@ -232,7 +232,7 @@ function App() {
       <div ref={aboutRef}>
       <div className="about-container">
         <div className="about-rows">
-          <div className="about-row1"><img src="public/OrangeMan.png" alt="Friendly waving man" /></div>
+          <div className="about-row1"><img src= {orangeman} alt="Friendly waving man" /></div>
           <div className="about-row2">
             <h1 className="sub-title">About Me</h1>
           <p> Hi there! I'm Ahmad, a motivated Software Engineering student at RMIT University with a passion for exploring diverse technologies. Team player with a strong work ethic eager to gain practical experience by working closely with stakeholders to solve business problems and achieve great outcomes. Equipped with a versatile skill set in various technologies and have a strong foundation in software engineering principles. Demonstrated ability to quickly grasp new concepts and adapt to evolving challenges. Committed to continuous learning and professional growth.</p>
@@ -285,10 +285,9 @@ function App() {
       <div className="contact-container">
           <div className="contact-left">
          <p><FontAwesomeIcon icon={faPaperPlane} className="icon"  size="2xl"/> ahmadkayy@gmail.com</p>
-         <p><FontAwesomeIcon icon={faSquarePhoneFlip} flip="horizontal" className="icon"  size="2xl"/> (+61) 413 918 228</p>
          <p><a href="https://www.linkedin.com/in/ahmad-kayyali/" target="_blank"><FontAwesomeIcon icon={faLinkedin} className="icon" size="2xl"/>LinkedIn</a></p>
 
-         <a className="btn" href="https://drive.google.com/file/d/1e-_QxRAQTKFMU7Tfh61ytPepPtGF8UvV/view?usp=sharing" target="_blank" title="" download>Download CV</a>
+         <a className="btn" href="https://drive.google.com/file/d/1E4Eg6Ck3kTaB4DzHe-8pjkC5Xd0uudpJ/view?usp=sharing" target="_blank" title="" download>Download CV</a>
           </div>
 
           <div className="contact-right">
