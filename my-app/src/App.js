@@ -3,12 +3,12 @@ import Typed from 'typed.js';
 import "./style.scss";
 import "./about.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faPaperPlane, faFilm, faPeopleArrows, faUser, faSquareArrowUpRight} from '@fortawesome/free-solid-svg-icons';
+import {faPaperPlane, faFilm, faPeopleArrows, faUser, faSquareArrowUpRight, faArrowDownLong} from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import Navbar from './Navbar'; 
 import emailjs from '@emailjs/browser';
-import orangeman from "./images/orangeman.png"
+import personalpicture from "./images/personalpicture.jpeg"
 
 function App() {
 
@@ -195,7 +195,7 @@ function App() {
       <Navbar scrollToSection={scrollToSection} />
         <div class="home-container">
 
-        <div class="text-container">
+        <div className="text-container">
         <span ref={el} />
         </div>
 
@@ -227,12 +227,13 @@ function App() {
           </div>
         </div>
       </div>
+
       </body>
 
       <div ref={aboutRef}>
       <div className="about-container">
         <div className="about-rows">
-          <div className="about-row1"><img src= {orangeman} alt="Friendly waving man" /></div>
+          <div className="about-row1"><img src= {personalpicture} alt="Friendly waving man" /></div>
           <div className="about-row2">
             <h1 className="sub-title">About Me</h1>
           <p> Hi there! I'm Ahmad, a motivated Software Engineering student at RMIT University with a passion for exploring diverse technologies. Team player with a strong work ethic eager to gain practical experience by working closely with stakeholders to solve business problems and achieve great outcomes. Equipped with a versatile skill set in various technologies and have a strong foundation in software engineering principles. Demonstrated ability to quickly grasp new concepts and adapt to evolving challenges. Committed to continuous learning and professional growth.</p>
@@ -256,7 +257,12 @@ function App() {
 
             <div className="projects-box">
               <h2>Loop Cinemas <FontAwesomeIcon icon={faFilm} size="xl" /></h2>
-              <p>As part of my Full Stack Development elective, I undertook a semester-long project to create an extensive and fully functional webpage. Leveraging the React JavaScript library, I implemented both REST and GraphQL API architectures to enhance different aspects of the site. The client-side interface for Loop Cinemas featured robust functionalities, including seamless login, sign-up, review, and booking processes. Notably, administrators had a distinct interface equipped with the ability to add, remove, or edit showcased movies. Admins could also exercise control by blocking users and managing movie reviews posted by users, allowing for comprehensive site administration.</p>
+              <ul>
+                <li>Client functionalities included robust user account login/signup, review system, and booking system.</li>
+                <li>Admin functionalities included adding, removing, editing existing movies, and removing or blocking inappropriate user comments.</li>
+                <li>Technologies used were React, Node, Express, Sequelize and GraphQL.</li>
+                <li>Received High Distinction for this class as a result of this outstanding project. </li>
+              </ul>
               
               <a href="https://github.com/rmit-fwp-s2-23/Assignment1" target="_blank"><FontAwesomeIcon icon={faSquareArrowUpRight} beat size="2xl"/></a>
 
@@ -264,14 +270,24 @@ function App() {
 
             <div className="projects-box">
               <h2>Closing the Gap <FontAwesomeIcon icon={faPeopleArrows}  size="xl"/></h2>
-              <p>I developed a webpage designed to provide professionals with a visual representation of the disparities between indigenous and non-indigenous Australians. The primary objective of this site was to spotlight and illustrate the variations in education, healthcare, welfare, and overall quality of life. This project marked my debut showcase at RMIT, earning a High Distinction grade for its comprehensive execution. Employing the JDBC architecture, I established a seamless connection to the database, utilizing SQL queries to dynamically present real-time data on the webpage.</p>
+             <ul>
+              <li>Webpage designed to provide professionals with a visual representation of the disparities between indigenous and non-indigenous Australians.</li>
+              <li>Seamlessly showcase the gap in education, healthcare, welfare, and overall quality of life between both groups</li>
+              <li>Earned High Distinction grade for its comprehensive execution</li>
+              <li>Employed the JDBC architecture and utilized SQL queries to dynamically present real-time data on the webpage.</li>
+             </ul>
               <a href="https://github.com/rmit-computing-technologies/cosc2803-sep22-studio-project-team-023-cosc2803-sep22" target="_blank"><FontAwesomeIcon icon={faSquareArrowUpRight} beat size="2xl"/></a>
             </div>
 
 
             <div className="projects-box">
               <h2>Personal Portfolio <FontAwesomeIcon icon={faUser}  size="xl"/></h2>
-              <p>This personal project serves as a showcase of both my artistic flair and technical proficiency. Crafted according to my preferences, the website embodies a harmonious blend of creativity and technical expertise. Utilizing the React JavaScript library, I seamlessly translated the knowledge acquired from my Full Stack course into the design and functionality of the webpage. The result is a digital portfolio that authentically represents my skills and reflects my unique approach to web development.</p>
+              <ul>
+              <li>Crafted according to my preferences, the website embodies a harmonious blend of creativity and technical expertise.</li>
+              <li>Personal project serves as a showcase of both my artistic flair and technical proficiency.</li>
+              <li>Webpage fully developed utlilizing the React framework applied from previous course knowledge.</li>
+              <li>Digital portfolio that authentically represents my skills and reflects my unique approach to web development.</li>   
+              </ul>          
               <a href="https://github.com/AhmadKayyali/Portfolio" target="_blank"><FontAwesomeIcon icon={faSquareArrowUpRight} beat size="2xl"/></a>
             </div>
             
@@ -284,7 +300,7 @@ function App() {
       <h1 className="sub-title-project">Contact Me</h1>
       <div className="contact-container">
           <div className="contact-left">
-         <p><FontAwesomeIcon icon={faPaperPlane} className="icon"  size="2xl"/> ahmadkayy@gmail.com</p>
+         <p><FontAwesomeIcon icon={faPaperPlane} className="icon"  size="2xl"/>ahmadkayyali.contact@gmail.com</p>
          <p><a href="https://www.linkedin.com/in/ahmad-kayyali/" target="_blank"><FontAwesomeIcon icon={faLinkedin} className="icon" size="2xl"/>LinkedIn</a></p>
 
          <a className="btn" href="https://drive.google.com/file/d/1E4Eg6Ck3kTaB4DzHe-8pjkC5Xd0uudpJ/view?usp=sharing" target="_blank" title="" download>Download CV</a>

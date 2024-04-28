@@ -9,7 +9,7 @@ body {
     position: absolute;
     width: 100%;
     z-index: 100;
-    color: #d5cdbf;
+    color: rgba(213, 205, 191);
     letter-spacing: 1px;
     display: flex;
     justify-content: space-between;
@@ -50,7 +50,7 @@ body {
   text-transform: uppercase;
   font-weight: bold;
   cursor: pointer;
-  color: #d5cdbf; /* Match the initial color */
+  color: rgba(213, 205, 191);
   border: none;
   background: none;
 }

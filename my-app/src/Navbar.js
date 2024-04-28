@@ -7,7 +7,6 @@ function Navbar({ scrollToSection }) {
     <div className="navbar-container">
         
     <div className="inner-container">
-      <div className="logo">Home</div>
       <ul className="option-buttons">
           <li>
             <button onClick={() => scrollToSection("aboutRef")}>About</button>
